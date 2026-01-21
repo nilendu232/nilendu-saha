@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PCB Ring Shaped Light | Nilendu Saha</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script> 
+
+</head>
+<body>
+<header>
+  <div id="navbar-placeholder"></div>
+</header>
+
+<main>
+  
+
+  <section id="project-detail" class="project-layout">
+    <!-- LEFT COLUMN -->
+    <div>
+
+      
+
+      <!-- ARCHITECTURE / APPROACH -->
+      <div class="card" style="margin-top:0;">
+        <h2 class="pd-title">PCB Design for Ring Shaped Light</h2>
+        <p class="project-meta pd-role">Electronics • PCB</p>
+        <p class="project-meta pd-location">Zyzzle Ltd. t/a BigSis, UK</p>
+
+        <h3 style="margin-top:1rem;">Tech stack</h3>
+        <div class="chip-row pd-stack">
+          <span class="chip">PCB Design</span>
+        <span class="chip">KiCad</span>
+        <span class="chip">Hardware Testing</span>
+        <span class="chip">SMD Soldering</span>
+        </div>
+      
+
+        <h2>Overview</h2>
+        <p class="pd-summary">
+          Designed a custom, application-specific PCB in <strong>KiCad</strong> to support an AI camera module; 
+          the dimension-constrained layout simplified the mounting process and reduced installation time. 
+        </p>
+
+        <h3 style="margin-top:1rem;">Highlights</h3>
+        <ul class="pd-highlights">
+          <li>Designed a compact LED ring-light PCB in KiCad, taking the schematic through to a 
+            <strong>manufacturable circular layout</strong> optimized for mechanical fit and clean mounting.</li>
+          <li>Implemented a <strong>configurable LED population</strong> option: the same board supports 
+            either <strong>8 LEDs</strong> or <strong>4 LEDs</strong>, enabling flexible BOM/cost and brightness configurations.</li>
+          <li>Supported dual supply operation based on LED count:<strong> 24 V operation when populated with 8 LEDs</strong>, 
+            and <strong>12 V operation when populated with 4 LEDs</strong> (as per camera requirement).</li>
+          <li>Integrated a simple configuration method using a solder jumper to 
+            adapt the circuit to the chosen build option.</li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+
+      <div class="card" style="margin-top:1rem;">
+        <h3>Role & responsibilities</h3>
+        <ul>
+          <li>Captured and developed the full schematic (LED string, supply connector, transistor stage, 
+            resistors, and solder-jumper configuration).</li>
+          <li>Performed PCB layout for a ring form-factor, routing traces around the perimeter 
+            while maintaining placement symmetry for uniform illumination.</li>
+          <li>Selected footprints and ensured DFM readiness (component placement, clearances, connector access, 
+            and assembly practicality for the ring geometry).</li>
+          <li>Populated the PCB and performed SMD soldering (hand assembly/rework as needed), then powered up and tested the ring light to 
+            validate correct LED operation and configuration for both 12 V (4‑LED) and 24 V (8‑LED) variants.</li>
+        </ul>
+
+        <h3 style="margin-top:1rem;">End result</h3>
+        <ul>
+          <li>Delivered a single, reusable ring-light PCB design that can be built as a <strong>4‑LED (12 V) or 
+            8‑LED (24 V)</strong> variant using the <strong>same base hardware</strong>.</li>
+          <li>Produced a mechanically friendly, <strong>dimension-constrained board</strong> that simplifies mounting 
+            and reduces assembly friction during integration.</li>
+          <li><strong>Improved AI camera image quality</strong> by providing stable, <strong>uniform illumination</strong> on the target area, reducing shadows and exposure variation—helping the vision pipeline achieve more <strong>consistent detection 
+            performance</strong> (especially in low-light/variable ambient lighting conditions).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MEDIA CARD -->
+      <div class="card project-media" style="margin-top:1rem;">
+        <h2>Media</h2>
+
+        <h3 style="margin-top:1rem;">Machine / model</h3>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="images/ring-light/model-1.png" alt="Ring Light in the cover">
+            <figcaption>Ring Light in the cover</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/ring-light/model-2.png" alt="Camera Mount">
+            <figcaption>Camera Mount</figcaption>
+          </figure>
+        </div>
+
+        <h3 style="margin-top:1rem;">Schematics</h3>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="images/ring-light/schematic-block-1.png" alt="LED Circuit diagram">
+            <figcaption>LED Circuit diagram</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/ring-light/schematic-block-2.png" alt="Ring Light Assembly">
+            <figcaption>Ring Light Assembly</figcaption>
+          </figure>
+        </div>
+
+        <h3 style="margin-top:1rem;">PCB / board views</h3>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="images/ring-light/top-view.png" alt="PCB top view">
+            <figcaption>PCB top view</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/ring-light/bottom-view.png" alt="PCB bottom view">
+            <figcaption>PCB bottom view</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/ring-light/3d-view.png" alt="Assembled PCB on bench">
+            <figcaption>3D view</figcaption>
+          </figure>
+        </div>
+
+        <h3 style="margin-top:1rem;">Demo video</h3>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="images/ring-light/control_vid.gif" alt="Sorting cycle demo (GIF)">
+            <figcaption>AI camera demo</figcaption>
+          </figure>
+
+        </div>
+      </div>
+  </section>
+</main>
+
+<footer>© 2026 Nilendu Saha. Built with HTML, CSS, and JavaScript.</footer>
+</body>
+</html>

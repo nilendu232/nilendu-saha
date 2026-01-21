@@ -1,0 +1,577 @@
+:root {
+  --bg: #f5f5f7;
+  --accent: #222222;
+  --accent-light: #555555;
+  --highlight: #163853;
+  --card-bg: #ffffff;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--accent);
+  line-height: 1.6;
+
+  /* Eye-catching but still clean */
+  background:
+    radial-gradient(900px 600px at 12% 12%, rgba(116, 201, 227, 0.38), transparent 60%),
+    radial-gradient(820px 540px at 88% 18%, rgba(96, 165, 250, 0.24), transparent 58%),
+    radial-gradient(900px 650px at 55% 95%, rgba(167, 139, 250, 0.18), transparent 62%),
+    linear-gradient(180deg, #f8fafc 0%, #f5f5f7 48%, #eef2ff 100%);
+}
+
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--highlight); }
+
+/* Navbar (unchanged) */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #163853;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left span {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: #F8FAFC;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
+}
+
+.nav-links a {
+  color: #E2E8F0;
+  padding-bottom: 0.2rem;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #60A5FA;
+  border-bottom: 2px solid #60A5FA;
+}
+
+.social-links a {
+  color: #FFFFFF !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+  background: #60A5FA;
+  transform: translateY(-1px);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+/* HERO: 2-COLUMN - Text+Skills Left | Photo Right */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  min-height: calc(100vh - 80px);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroSlideIn 0.8s ease-out forwards;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  animation-delay: 0.1s;
+}
+
+.hero-text p.lead {
+  font-size: 1.05rem;
+  color: var(--accent-light);
+  margin-bottom: 1.5rem;
+  animation-delay: 0.2s;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  animation-delay: 0.3s;
+}
+
+.hero-button-resume {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  animation-delay: 0.1s;
+  margin-bottom: 1rem;
+  align-self: start;
+}
+
+.btn {
+  padding: 0.7rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--accent-light);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover { 
+  background: var(--highlight); 
+  border-color: var(--highlight);
+  color: #fff;  
+}
+
+.card a.btn{
+  display: inline-block;
+  margin-top: 0.9rem;
+}
+
+
+.hero-tagline {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--accent-light);
+  animation-delay: 0.4s;
+}
+
+/* Core Expertise - UNDER tagline in left column */
+.hero-skills {
+  background: var(--card-bg);
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 1px solid #163853;
+  animation-delay: 0.5s;
+}
+
+.hero-skills h3 {
+  margin: 0 0 1.2rem 0;
+  font-size: 1.15rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.skill-item {
+  flex: 1;
+  text-align: center;
+}
+
+.skill-number {
+  display: block;
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--highlight);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.1;
+}
+
+.skill-item span:last-child {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--accent-light);
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+
+/* Photo right column */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  height: 710px; /* +60px taller */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.258);
+  border: 1px solid #163853;
+  overflow: hidden;
+  animation-delay: 0.6s;
+}
+
+@media (max-width: 900px) {
+  .hero-card { 
+    height: 380px; /* Proportionally taller mobile too */
+    max-height: 45vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-card { height: 420px; } /* Extra breathing room on small screens */
+}
+
+
+@keyframes heroSlideIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Sections below */
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 0.98rem;
+  color: var(--accent-light);
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.8rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #163853;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.project-meta {
+  font-size: 0.85rem;
+  color: var(--accent-light);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.card h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #e0e0e0;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--accent-light);
+  margin-top: 5rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .hero-right {
+    order: -1;
+    align-self: center;
+  }
+  .hero-skills {
+    order: 4;
+    margin-top: 1rem;
+  }
+  main { padding: 2rem 1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-card { height: 600px; }
+  .skills-grid { gap: 1rem; }
+  .skill-number { font-size: 1.8rem; }
+}
+
+/* Other pages */
+.resume-embed, .project-layout {
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .resume-embed, .project-layout { grid-template-columns: 1fr; }
+}
+
+
+/* MUCH SPACIER Core Expertise - Bold + Tall */
+.hero-skills {
+  padding: 2.5rem 2rem !important; /* Extra padding */
+  gap: 0.5rem !important;
+  min-height: 220px; /* Fixed tall card */
+  justify-content: center;
+}
+
+.hero-skills h3 {
+  font-size: 1.3rem !important; /* Bigger title */
+  font-weight: 700 !important; /* Extra bold */
+  letter-spacing: 0.5px;
+  margin-bottom: 1.8rem !important; /* More title space */
+  text-transform: uppercase;
+  color: var(--accent) !important;
+}
+
+.skills-grid {
+  gap: 2.2rem !important; /* Wider horizontal spacing */
+  padding: 0 1rem;
+}
+
+.skill-item {
+  gap: 0.8rem !important; /* Vertical space in each item */
+  padding: 1rem 0.5rem !important; /* Item padding */
+}
+
+.skill-number {
+  font-size: 3rem !important; /* HUGE bold numbers */
+  font-weight: 900 !important; /* Maximum bold */
+  line-height: 1;
+  margin-bottom: 0.3rem !important;
+  font-family: 'SF Pro Display', 'Inter', -apple-system, sans-serif !important;
+}
+
+/* QUICK GAP FIX - Compact hero + tight sections */
+.hero {
+  min-height: 70vh !important; /* Shorter than full viewport */
+  padding-bottom: 2rem !important;
+  gap: 2rem !important;
+}
+
+.hero-left {
+  gap: 1.5rem !important; /* Tighten internal hero spacing */
+}
+
+.hero-tagline {
+  margin-top: 1rem !important;
+}
+
+main section:first-of-type {
+  margin-bottom: 1.5rem !important; /* Close gap to projects */
+}
+
+.section-title {
+  margin-top: 1rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.10;
+
+  /* Very subtle texture */
+  background:
+    repeating-radial-gradient(circle at 0 0,
+      rgba(0,0,0,0.08),
+      rgba(0,0,0,0.08) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+}
+
+
+
+.chip-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.chip{
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;          /* pill shape */
+  border: 1px solid rgba(22,56,83,0.25);
+  background: rgba(22,56,83,0.07);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  user-select: none;
+
+  pointer-events: none;           /* unclickable */
+  cursor: default;
+}
+
+
+
+/* Project detail: media card */
+.project-media{
+  margin-bottom: 1rem;
+}
+
+/* Media grid inside the card */
+.media-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem;
+}
+
+/* Each image/video + caption */
+.media-item{
+  margin: 0;
+}
+
+.media-item img,
+.media-item video{
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(22,56,83,0.25);
+  background: #fff;
+}
+
+/* Keep videos nicely shaped */
+.media-item video{
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+/* Caption styling */
+.media-item figcaption{
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--accent-light);
+}
+
+
+
+
+
+/* figure elements often have default margins; remove them */
+.media-item-lead { 
+  margin: 0; 
+}
+
+/* reduce gap before/after the lead image */
+.media-item-lead img {
+  margin-left: auto;   /* pushes to the right */
+}
+
+/* tighten headings inside cards */
+.card h2 { margin-top: 0; }
+.card h3 { margin-top: 0.75rem; }
+
+
+/* Make only the 2nd (right) image smaller */
+.media-grid > .media-item:nth-child(2){
+  max-width: 360px;   /* adjust: 260–420px */
+  justify-self: end;  /* keep it on the right side of its grid cell */
+}
+
+.media-grid > .media-item:nth-child(2) img{
+  width: 100%;        /* fill the smaller max-width box */
+  height: auto;
+}
+
+
+/* MEDIA: masonry layout to eliminate grid holes */
+.media-grid{
+  columns: 2;
+  column-gap: 0.75rem;     /* reduce horizontal gap */
+}
+
+@media (max-width: 768px){
+  .media-grid{ columns: 1; }
+}
+
+.media-item{
+  break-inside: avoid;     /* keep figure intact in a column */
+  margin: 0 0 0.75rem;     /* vertical gap between items */
+}
+
+.media-item img,
+.media-item video{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(22,56,83,0.25);
+  background: #fff;
+}
+
+.media-item figcaption{
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--accent-light);
+}
+
+
+/* Make pic3 span both columns */
+.media-item-lead{
+  -webkit-column-span: all;
+  column-span: all;
+}
+
+/* Optional: a bit more emphasis */
+.media-item-lead img{
+  border-width: 1px;
+}
+
+

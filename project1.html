@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PCB Industrial Sorter | Nilendu Saha</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="main.js"></script> 
+
+</head>
+<body>
+<header>
+  <div id="navbar-placeholder"></div>
+</header>
+
+<main>
+  
+
+  <section id="project-detail" class="project-layout">
+    <!-- LEFT COLUMN -->
+    <div>
+
+      
+
+      <!-- ARCHITECTURE / APPROACH -->
+      <div class="card" style="margin-top:0;">
+        <h2 class="pd-title">PCB Design for Industrial Sorting Machine</h2>
+        <p class="project-meta pd-role">Embedded Systems • Electronics</p>
+        <p class="project-meta pd-location">Zyzzle Ltd. t/a BigSis, UK</p>
+
+        <h3 style="margin-top:1rem;">Tech stack</h3>
+        <div class="chip-row pd-stack">
+          <span class="chip">PCB Design</span>
+        <span class="chip">Eagle</span>
+        <span class="chip">Hardware Testing</span>
+        <span class="chip">ESP32</span>
+        <span class="chip">C/C++</span>
+        </div>
+      
+
+        <h2>Overview</h2>
+        <p class="pd-summary">
+          Designed a custom <strong>Eagle-based</strong>, application-specific controller PCB with an onboard microcontroller,
+          sensor inputs, and outputs for relays and DC motors to run an automated unit sorting system.
+        </p>
+
+        <h3 style="margin-top:1rem;">Highlights</h3>
+        <ul class="pd-highlights">
+          <li>Designed schematics which demonstrated the layout of sensor inputs plus relay and motor output terminals.</li>
+          <li>Developed a <strong>2-layer board</strong> based on the schematics .</li>
+          <li><strong>Reduced cabinet wiring by ~15–20%</strong> by consolidating secured I/O connectors.</li>
+          <li><strong>Improved assembly time by ~25%</strong> via repeatable harnessing and clearer integration points.</li>
+          <li>Developed control software enabling autonomous operation and <strong>stable throughput (~1 unit per 2 seconds)</strong> into the main line.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+
+      <div class="card" style="margin-top:1rem;">
+        <h3>Role & responsibilities</h3>
+        <ul>
+          <li>Captured requirements (I/O count, supply rails, noise/EMI constraints, connector strategy).</li>
+          <li>Designed schematics and selected parts (MCU, protection, drivers, connectors, regulation).</li>
+          <li>Created a <strong>2-Layer PCB layout</strong> for robust power + signal routing and serviceability (test points, labels).</li>
+          <li>Performed bring-up/testing and supported machine commissioning and debugging.</li>
+          <li>Harnessed the features of <strong>ESP32</strong> and made it the heart of the PCB.</li>
+          <li>Developed <strong>firmware/software</strong> to control the sorting cycle and run the system autonomously.</li>
+        </ul>
+
+        <h3 style="margin-top:1rem;">End result</h3>
+        <ul>
+          <li><strong>15–20% less wiring</strong> and <strong>25% faster assembly</strong> compared to the previous build.</li>
+          <li>Achieved stable throughput contributing<strong> 1 unit per 2 seconds </strong>to the production line.</li>
+          <li>Implemented <strong>Horizontal Scaling</strong> for better throughput and reliability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MEDIA CARD -->
+      <div class="card project-media" style="margin-top:1rem;">
+        <h2>Media</h2>
+
+        <h3 style="margin-top:1rem;">Machine / model</h3>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="images/industrial-sorter/model-1.png" alt="Sorting machine overview">
+            <figcaption>Sorting machine overview</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/industrial-sorter/model-2.png" alt="Multiple Units">
+            <figcaption>Multiple Units integration</figcaption>
+          </figure>
+        </div>
+
+        <h3 style="margin-top:1rem;">Schematics</h3>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="images/industrial-sorter/schematic-block-1.png" alt="Block diagram of brushed motor control">
+            <figcaption>DC Motor Control block diagram (excerpt)</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/industrial-sorter/schematic-block-2.png" alt="Schematic excerpt: MCU and interfaces">
+            <figcaption>MCU + Level Shifting (excerpt)</figcaption>
+          </figure>
+        </div>
+
+        <h3 style="margin-top:1rem;">PCB / board views</h3>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="images/industrial-sorter/top-view.png" alt="PCB top view">
+            <figcaption>PCB top view</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/industrial-sorter/bottom-view.png" alt="PCB bottom view">
+            <figcaption>PCB bottom view</figcaption>
+          </figure>
+          <figure class="media-item">
+            <img src="images/industrial-sorter/3d-view2.png" alt="Assembled PCB on bench">
+            <figcaption>Assembled prototype</figcaption>
+          </figure>
+        </div>
+
+        <h3 style="margin-top:1rem;">Demo video</h3>
+        <div class="media-grid">
+          <figure class="media-item">
+            <img src="images/industrial-sorter/control_vid.gif" alt="Sorting cycle demo (GIF)">
+            <figcaption>Sorting cycle demo</figcaption>
+          </figure>
+
+        </div>
+      </div>
+  </section>
+</main>
+
+<footer>© 2026 Nilendu Saha. Built with HTML, CSS, and JavaScript.</footer>
+</body>
+</html>
